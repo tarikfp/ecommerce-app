@@ -1,0 +1,45 @@
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: [
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: './tsconfig.eslint.json',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  overrides: [],
+  plugins: ['react'],
+  rules: {
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
+  },
+  ignorePatterns: [
+    'android/',
+    'ios/',
+    'lib/',
+    '__setups__/',
+    '__mocks__/',
+    'coverage/',
+    'scripts/',
+    '**/e2e/*.js',
+    'node_modules/',
+    '.eslintrc.js',
+    'App.tsx',
+    '.prettierrc.js',
+    'babel.config.js',
+    'react-native-config.js',
+    'index.js',
+    'jest.setup.js',
+    'ReactotronConfig.ts',
+    'commitlint.config.js',
+    'jest.config.js',
+    'metro.config.js',
+  ],
+};
