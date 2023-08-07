@@ -4,7 +4,7 @@ import { BasketScreen, DealsScreen, HomeScreen } from '../screens';
 import { useProductsInBasketCount } from '../store/BasketStore';
 import { useAppTheme } from '../theme/core';
 import { RouteNames } from './RouteNames';
-import { getTabBarIcon } from './getTabbarIcon';
+import { getTabBarIcon, getTabbarLabel } from './getTabbarIcon';
 import { TabbarStackParamList } from './types';
 
 const Tab = createBottomTabNavigator<TabbarStackParamList>();
@@ -22,6 +22,7 @@ export default function AppTabBar() {
         },
         tabBarActiveTintColor: colors.tabbarIconActive,
         tabBarInactiveTintColor: colors.tabbarIconDisabled,
+        tabBarLabel: getTabbarLabel(route.name),
         tabBarIcon: (tabBarIconParams) =>
           getTabBarIcon({
             params: tabBarIconParams,

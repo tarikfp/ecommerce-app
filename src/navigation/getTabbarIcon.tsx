@@ -18,6 +18,21 @@ export const getTabBarIconCommonParams = (
   color,
 });
 
+export const getTabbarLabel = (route: RouteNames) => {
+  switch (route) {
+    case RouteNames.BASKET:
+      return 'Basket';
+
+    case RouteNames.DEALS:
+      return 'Deals';
+
+    case RouteNames.HOME:
+      return 'Home';
+
+    default:
+      throw new Error(`Invalid route name: ${route}`);
+  }
+};
 export const getTabBarIcon = ({
   params,
   routeName,

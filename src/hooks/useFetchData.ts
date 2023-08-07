@@ -33,7 +33,7 @@ export const useDataFetching = <T>(
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [fetchFn]);
 
   useEffect(() => {
     fetchData();
